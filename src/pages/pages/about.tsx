@@ -9,7 +9,7 @@ export default function About() {
 			<div>
 				<Button>sample</Button>
 			</div>
-			<Link href="/">go to pages router top</Link>
+			<Link href="/pages">go to pages router top</Link>
 		</main>
   );
 }
