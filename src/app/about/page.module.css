@@ -4,7 +4,3 @@
 	gap: 16px;
 	flex-direction: column;
 }
-
-.btn_override {
-	background-color: red;
-}

@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function Home() {
   return (
 		<main className={styles.main}>
-			<h1>top</h1>
+			<h1>about</h1>
 			<div>
-				<Button className={styles.btn_override}>sample</Button>
+				<Button>sample</Button>
 			</div>
-			<Link href="/about">go to about</Link>
+			<Link href="/">go to top</Link>
 		</main>
   );
 }
