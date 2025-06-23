@@ -17,6 +17,8 @@ npm run dev:t
 3. ブラウザバック or `/`へ遷移
 4. ボタンが白いまま
 
+![app router](./docs/app_router.gif)
+
 | | | 問題あり |
 -- | -- | --
 | dev | webpack | o |
@@ -40,6 +42,8 @@ npm run dev:t
 2. `/pages/about`へ遷移
 3. ブラウザバック or `/`へ遷移
 4. ボタンが白いまま
+
+![pages router](./docs/pages_router.gif)
 
 | | | 問題あり |
 -- | -- | --
