@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# css modulesのおかしな挙動サンプル
 
-## Getting Started
-
-First, run the development server:
+## App Router
 
 ```bash
-npm run dev
+# webpack
+npm run dev:w
+
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# turbopack
+npm run dev:t
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. `/`へアクセス
+2. `/about`へ遷移
+3. ブラウザバック or `/`へ遷移
+4. ボタンが白いまま
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| | | 問題あり |
+-- | -- | --
+| dev | webpack | o |
+| dev | turbopack | o |
+| prd | webpack | - |
+| prd | turbopack | - |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages Router
 
-## Learn More
+```bash
+# webpack
+npm run dev:w
 
-To learn more about Next.js, take a look at the following resources:
+# or
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# turbopack
+npm run dev:t
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. `/pages`へアクセス
+2. `/pages/about`へ遷移
+3. ブラウザバック or `/`へ遷移
+4. ボタンが白いまま
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| | | 問題あり |
+-- | -- | --
+| dev | webpack | -  |
+| dev | turbopack | o |
+| prd | webpack | - |
+| prd | turbopack | - |

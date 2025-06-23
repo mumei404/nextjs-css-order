@@ -1,0 +1,10 @@
+.main {
+	padding: 64px;
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+}
+
+.btn_override {
+	background-color: blue;
+}
